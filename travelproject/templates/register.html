@@ -78,12 +78,10 @@
     <label for="confirm_password">Confirm Password:</label>
     <input type="password" name="confirm_password" placeholder="Confirm your password" required>
 
-    <input type="submit"><br>
-      {% for msg in messages %}
-            <h2>{{ msg }}</h2>
-      {% endfor %}
+    <input type="submit">
   </form>
-
-
+{% for msg in messages %}
+{% endfor %}
+<h2>{{ msg }}</h2>
 </body>
 </html>

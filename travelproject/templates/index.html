@@ -13,35 +13,6 @@
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'styles/about_responsive.css' %}">
-
-    <!-- ... (other meta tags and links) ... -->
-
-    <style>
-        .why_row {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .why_col {
-            flex: 1;
-            margin: 0 10px;
-        }
-
-        .why_item {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            /* Add any other styling you need */
-        }
-
-        .why_content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
-
 </head>
 <body>
 
@@ -60,16 +31,9 @@
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li><a href="index.html">Home</a></li>
 									<li class="active"><a href="about.html">About us</a></li>
-{#									<li><a href="about.html">About us</a></li>#}
-                                    {% if user.is_authenticated %}
-                                    <li>Hello {{ user.username }}</li>
-                                    <li><a href="credentials/logout">Logout</a></li>
-                                    {% else %}
-
-				                    <li><a href="credentials/register">Register</a></li>
-				                    <li><a href="credentials/login">Login</a></li>
-
-                                    {% endif %}
+									<li><a href="#">Services</a></li>
+									<li><a href="news.html">News</a></li>
+									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>
 							<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
@@ -243,8 +207,8 @@
 					<div class="section_title"><h2>Why choose us?</h2></div>
 				</div>
 			</div>
-
 			<div class="row why_row">
+				
 				<!-- Why item -->
                 {% for i in result %}
 				<div class="col-lg-4 why_col">
